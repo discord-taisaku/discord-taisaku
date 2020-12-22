@@ -1,0 +1,6 @@
+{
+    "rules": {
+        "no-var": true,
+        "no-implicit-any": true
+    }
+}

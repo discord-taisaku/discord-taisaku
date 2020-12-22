@@ -1,0 +1,13 @@
+{
+    "rules": {
+        "no-var": "error",
+        "no-unused-vars": "warn"
+    },
+    "parserOptions": {
+        "ecmaVersion": 9
+    },
+    "env": {
+        "es6": true,
+        "node": true
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "discord-taisaku",
+  "version": "1.0.0-beta",
+  "description": "An epic discord.js bot framework.",
+  "main": "src/index.js",
+  "typings": "typings/types.d.ts",
+  "extends": {
+    ".": [
+      {
+        "require": "src/index.js",
+        "import": "es/index.mjs"
+      },
+      "src/index.js"
+    ],
+    "./es": "./es/index.mjs"
+  },
+  "scripts": {
+    "test": "npm run lint && eslint test && node test/bot.js",
+    "lint": "eslint src",
+    "lint:types": "tslint typings/types.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Irian3x3/discord-taisaku.git"
+  },
+  "keywords": [
+    "discord",
+    "taisaku",
+    "discord.js"
+  ],
+  "author": "Irian3x3 <irian3x3@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Irian3x3/discord-taisaku/issues"
+  },
+  "homepage": "https://github.com/Irian3x3/discord-taisaku#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "nicer-logging": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14",
+    "eslint": "^7.16.0",
+    "tslint": "^6.1.3"
+  }
+}
