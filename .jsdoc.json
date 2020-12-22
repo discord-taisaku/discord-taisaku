@@ -1,3 +1,11 @@
 {
-    
+    "source": {
+        "include": [
+            "README.md",
+            "src",
+            "package.json"
+        ],
+        "includePattern": ".js$",
+        "excludePattern": "node_modules/"
+    }
 }
