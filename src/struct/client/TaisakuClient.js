@@ -1,5 +1,6 @@
 const { Client } = require("discord.js");
 const { Logger } = require("nicer-logging");
+const ClientUtil = require("./ClientUtils");
 
 /**
  * Taisaku framework client.
@@ -19,6 +20,12 @@ module.exports = class TaisakuClient extends Client {
          * These have full control over the bot and bypass everything, so be mindful of who you give this to.
          */
         this.owners = owners;
+
+        /**
+         * Client utilities.
+         * @type {ClientUtils}
+         */
+        this.util = new ClientUtil(this);
     };
 
     /**
@@ -36,5 +43,5 @@ module.exports = class TaisakuClient extends Client {
 
     get logger() {
         return new Logger(this.logOptions ? this.logOptions : { useColors: false });
-    }
+    };
 };

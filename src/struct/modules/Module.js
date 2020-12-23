@@ -1,13 +1,12 @@
 module.exports = class TaisakuModule {
-    constructor({ category = 'default' } = {}) {
+    constructor(identifier, options = {}) {
         
-    };
-
-    /**
-     * Returns the _ of the module.
-     * @returns {string}
-     */
-    toString() {
-        return ''
+        /**
+         * Returns the identifier of the module.
+         * @returns {string}
+         */
+        this.toString = () => {
+            return identifier
+        }
     };
 };

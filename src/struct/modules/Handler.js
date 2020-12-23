@@ -2,9 +2,10 @@ const { EventEmitter } = require('events');
 const TaisakuModule = require('./Module');
 
 /**
- * Base handler class.
+ * Base class for a module handler.
  * @param {TaisakuClient} client - The taisaku client.
- * @param {TaisakuHandlerOptions} options - Options for the handler.
+ * @param {HandlerOptions} options - Options for the handler.
+ * @extends {EventEmitter}
  */
 module.exports = class TaisakuHandler extends EventEmitter {
     constructor(client, {
